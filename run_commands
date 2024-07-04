@@ -1,1 +1,1 @@
-fio fio-test.fio --filename=/testdirectory --output=./fio-output
+fio fio-test.fio --filename=/testdirectory/testfile.fio --output=./fio-output
