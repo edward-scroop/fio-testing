@@ -6,10 +6,11 @@ ioengine=io_uring
 numjobs=16
 group_reporting
 direct=1
-sync=1
+buffered=0
+end_fsync=1
 size=10GiB
 
-[4KiBiB-sw-qd1]
+[4KiB-sw-qd1]
 stonewall
 bs=4KiBiB
 rw=write
@@ -19,18 +20,6 @@ iodepth=1
 stonewall
 bs=4KiB
 rw=write
-iodepth=32
-
-[4KiB-sr-qd1]
-stonewall
-bs=4KiB
-rw=read
-iodepth=1
-
-[4KiB-sr-qd32]
-stonewall
-bs=4KiB
-rw=read
 iodepth=32
 
 [4KiB-rw-qd1]
@@ -43,18 +32,6 @@ iodepth=1
 stonewall
 bs=4KiB
 rw=randwrite
-iodepth=32
-
-[4KiB-rr-qd1]
-stonewall
-bs=4KiB
-rw=randread
-iodepth=1
-
-[4KiB-rr-qd32]
-stonewall
-bs=4KiB
-rw=randread
 iodepth=32
 
 [4KiB-70rr30rw-qd1]
@@ -97,18 +74,6 @@ bs=1MiB
 rw=write
 iodepth=32
 
-[1MiB-sr-qd1]
-stonewall
-bs=1MiB
-rw=read
-iodepth=1
-
-[1MiB-sr-qd32]
-stonewall
-bs=1MiB
-rw=read
-iodepth=32
-
 [1MiB-rw-qd1]
 stonewall
 bs=1MiB
@@ -119,18 +84,6 @@ iodepth=1
 stonewall
 bs=1MiB
 rw=randwrite
-iodepth=32
-
-[1MiB-rr-qd1]
-stonewall
-bs=1MiB
-rw=randread
-iodepth=1
-
-[1MiB-rr-qd32]
-stonewall
-bs=1MiB
-rw=randread
 iodepth=32
 
 [1MiB-70rr30rw-qd1]
