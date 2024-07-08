@@ -2,8 +2,7 @@
 runtime=120
 ramp_time=5
 ioengine=io_uring
-#numjobs=$ncpus
-numjobs=16
+numjobs=$ncpus
 group_reporting
 direct=1
 buffered=0
